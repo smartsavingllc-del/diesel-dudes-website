@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Diesel Dudes Mobile Mechanics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .contact-form-wrapper {
+            position: relative;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 20px;
+            box-shadow: 10px 10px 0px #000;
+            padding: 60px 54px;
+            width: 100%;
+            max-width: 507px;
+            margin: 0 auto;
+        }
+        
+        .form-decorators {
+            position: absolute;
+            inset: 20px;
+            pointer-events: none;
+        }
+        
+        .decorator {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        
+        .decorator.top-left {
+            top: 0;
+            left: 0;
+        }
+        
+        .decorator.top-right {
+            top: 0;
+            right: 0;
+        }
+        
+        .decorator.bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        
+        .decorator.bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+        
+        .contact-form {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 28px;
+        }
+        
+        .form-group:last-of-type {
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #333;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 16px 20px;
+            background-color: #fff;
+            border: 2px solid #000000;
+            border-radius: 100px;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #000;
+            transition: all .3s ease;
+        }
+        
+        textarea {
+            border-radius: 20px;
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ed6623;
+            box-shadow: 0 0 0 3px rgba(237, 102, 35, 0.1);
+        }
+        
+        input::placeholder {
+            color: #999;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 205px;
+            height: 48px;
+            margin: 0 auto;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            line-height: 1.2;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+        
+        .submit-btn:hover:not(:disabled) {
+            background-color: #ed6623;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .form-message {
+            margin-top: 20px;
+            text-align: center;
+            padding: 0;
+            transition: all .3s ease;
+        }
+        
+        .form-message p {
+            margin: 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .form-message.success p {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error p {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .contact-info h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .phone-link {
+            color: #ed6623;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-form-wrapper {
+                padding: 40px 30px;
+            }
+            
+            .submit-btn {
+                width: 100%;
+            }
+            
+            .contact-info h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p>Need emergency roadside assistance? Call us now:</p>
+            <a href="tel:+18032306390" class="phone-link">(803) 230-6390</a>
+            <p>24/7 Mobile Diesel Repair Services</p>
+        </div>
+        
+        <div class="contact-form-wrapper">
+            <div class="form-decorators">
+                <div class="decorator top-left"></div>
+                <div class="decorator top-right"></div>
+                <div class="decorator bottom-left"></div>
+                <div class="decorator bottom-right"></div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="City, State" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="emergency-roadside">Emergency Roadside Assistance</option>
+                        <option value="engine-repair">Engine Repair</option>
+                        <option value="brake-service">Brake Service</option>
+                        <option value="electrical">Electrical System</option>
+                        <option value="tire-service">Tire Service</option>
+                        <option value="fuel-system">Fuel System</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Describe your issue or service needed..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="form-message" id="formMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const messageDiv = document.getElementById('formMessage');
+            
+            // Simulate form submission
+            messageDiv.innerHTML = '<p>Thank you for your message! We will contact you shortly.</p>';
+            messageDiv.className = 'form-message success';
+            
+            // Reset form
+            this.reset();
+            
+            // In a real implementation, you would send the form data to your server
+            // For now, we'll just show a success message
+        });
+    </script>
+</body>
+</html> 

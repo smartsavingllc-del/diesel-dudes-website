@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diesel Dudes Mobile Mechanics - 24/7 Mobile Diesel Repair</title>
+    <meta name="description" content="24/7 mobile diesel mechanic Charlotte NC & Columbia SC. Emergency roadside assistance, on-site truck repair & fleet maintenance. Call (803) 230-6390 now!">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1020;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 102px;
+        }
+        
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: #ed6623;
+            text-decoration: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: #1d1d1d;
+            text-decoration: none;
+            transition: color .15s ease-in-out;
+        }
+        
+        .nav-link:hover {
+            color: #ed6623;
+        }
+        
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ed6623;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            white-space: nowrap;
+            min-height: 42px;
+        }
+        
+        .nav-cta:hover {
+            background: #ff6b00;
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            position: relative;
+            height: 912px;
+            overflow: hidden;
+            margin-top: -102px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 40px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all .3s ease;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        
+        .btn-primary {
+            background: #ed6623;
+            color: #fff;
+            border-color: #ed6623;
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: #ed6623;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: #fff;
+            color: #333;
+        }
+        
+        .services-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 10px 10px 0px #000;
+            transition: all .3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 15px 15px #000;
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: #ed6623;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        .service-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            background: #ed6623;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .cta-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .phone-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #1d1d1d;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-brand h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: #ed6623;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ed6623;
+            text-transform: uppercase;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all .3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: #ed6623;
+            transform: translate(3px);
+        }
+        
+        .footer-bottom {
+            margin-top: 40px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                height: 80px;
+            }
+            
+            .hero {
+                height: auto;
+                min-height: 600px;
+                margin-top: 0;
+                padding: 100px 0;
+            }
+            
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">DIESEL DUDES</a>
+            <ul class="nav-list">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="Services.html" class="nav-link">Services</a></li>
+                <li><a href="locations.html" class="nav-link">Locations</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact-form.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">24/7 Mobile Diesel Repair</h1>
+            <p class="hero-subtitle">Emergency roadside assistance and mobile diesel mechanics serving Charlotte NC & Columbia SC</p>
+            <div class="hero-buttons">
+                <a href="tel:+18032306390" class="btn btn-primary">Call Now: (803) 230-6390</a>
+                <a href="contact-form.html" class="btn btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <a href="EmergencyRoadsideAssistance.html" class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Roadside Assistance</h3>
+                    <p>24/7 emergency breakdown service and roadside assistance</p>
+                </a>
+                
+                <a href="MobileEngineDiagnostics.html" class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Engine Diagnostics & Repair</h3>
+                    <p>Complete diesel engine diagnostics and repair services</p>
+                </a>
+                
+                <a href="brakes.html" class="service-card">
+                    <div class="service-icon">🛑</div>
+                    <h3>Brake System Repair</h3>
+                    <p>Air brake and hydraulic brake system repairs</p>
+                </a>
+                
+                <a href="electrical.html" class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical System</h3>
+                    <p>Electrical diagnostics and repair for diesel vehicles</p>
+                </a>
+                
+                <a href="tires.html" class="service-card">
+                    <div class="service-icon">🛞</div>
+                    <h3>Tire Services</h3>
+                    <p>Commercial tire repair and replacement services</p>
+                </a>
+                
+                <a href="fuel-system.html" class="service-card">
+                    <div class="service-icon">⛽</div>
+                    <h3>Fuel System Repair</h3>
+                    <p>Complete fuel system diagnostics and repair</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Now?</h2>
+                <p>Don't wait for a tow truck. Call us for immediate mobile diesel repair service.</p>
+                <a href="tel:+18032306390" class="phone-link">(803) 230-6390</a>
+                <p>Available 24/7 for emergency roadside assistance</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DIESEL DUDES</h3>
+                    <p>24/7 Mobile Diesel Mechanics</p>
+                    <p>Serving Charlotte NC & Columbia SC</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="EmergencyRoadsideAssistance.html">Emergency Roadside</a></li>
+                        <li><a href="MobileEngineDiagnostics.html">Engine Repair</a></li>
+                        <li><a href="brakes.html">Brake Service</a></li>
+                        <li><a href="electrical.html">Electrical</a></li>
+                        <li><a href="tires.html">Tire Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="locations.html">Charlotte NC</a></li>
+                        <li><a href="locations.html">Columbia SC</a></li>
+                        <li><a href="locations.html">Rock Hill</a></li>
+                        <li><a href="locations.html">Fort Mill</a></li>
+                        <li><a href="locations.html">Surrounding Areas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+18032306390">(803) 230-6390</a></li>
+                        <li><a href="contact-form.html">Contact Form</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="Services.html">All Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diesel Dudes Mobile Mechanics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
