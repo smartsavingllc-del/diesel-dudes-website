@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Locations - Diesel Dudes Mobile Mechanics | New York</title>
+    <meta name="description" content="Find Diesel Dudes mobile diesel repair services across New York. Emergency roadside assistance and on-site truck repair available 24/7. Call (803) 230-6390 now!">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1020;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 102px;
+        }
+        
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 32px;
+        }
+        
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: #1d1d1d;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+            letter-spacing: 0;
+        }
+        
+        .nav-link:hover {
+            color: #ed6623;
+        }
+        
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ed6623;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+            min-height: 42px;
+        }
+        
+        .nav-cta:hover {
+            background: #ff6b00;
+            transform: translateY(-2px);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/semitruck-drives-highway-through-scenic-landscape-sunset-1.png') center/cover;
+            color: #fff;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 102px;
+        }
+        
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 60px;
+            line-height: 1.1;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            margin: 0 0 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 40px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        
+        .btn-primary {
+            background: #ed6623;
+            color: #fff;
+            border-color: #ed6623;
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: #ed6623;
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            color: #333;
+            border-color: #000;
+        }
+        
+        .btn-secondary:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+        
+        .locations-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        
+        .intro-text p {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 30px;
+            color: #1d1d1d;
+        }
+        
+        .state-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 44px;
+            line-height: 48px;
+            color: #1d1d1d;
+            text-transform: uppercase;
+            margin: 0 0 30px;
+            text-align: center;
+        }
+        
+        .location-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .location-card {
+            background: #fff;
+            border: 2px solid #1d1d1d;
+            border-radius: 20px;
+            box-shadow: 10px 10px 0px #000;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 15px 15px #000;
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .card-header h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            line-height: 36px;
+            color: #1d1d1d;
+            margin: 0;
+        }
+        
+        .emergency-badge {
+            background: #ed6623;
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            padding: 5px 15px;
+            border-radius: 100px;
+        }
+        
+        .service-areas h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: #1d1d1d;
+            margin: 0 0 10px;
+        }
+        
+        .service-areas p {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1d1d1d;
+            margin: 0;
+        }
+        
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .cta-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: #ed6623;
+            text-transform: uppercase;
+        }
+        
+        .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .location-card:hover .arrow-icon {
+            transform: translate(5px);
+        }
+        
+        .footer {
+            background: #1d1d1d;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-brand img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            margin: 0 0 20px;
+            color: #ed6623;
+            text-transform: uppercase;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-column a:hover {
+            color: #ed6623;
+            transform: translate(3px);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                height: 80px;
+            }
+            
+            .hero-section {
+                margin-top: 80px;
+                padding: 60px 0;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .state-title {
+                font-size: 32px;
+                line-height: 36px;
+            }
+            
+            .location-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="DUDESINDEX.HTML" class="logo">
+                <img src="img/dd-logo.svg" alt="Diesel Dudes" class="logo-img">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="DUDESINDEX.HTML" class="nav-link">HOME</a></li>
+                    <li><a href="Services.html" class="nav-link">SERVICES</a></li>
+                    <li><a href="locations-ny.html" class="nav-link">LOCATIONS</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="contact-form.html" class="nav-cta">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Service Locations</h1>
+            <p class="hero-subtitle">Find Diesel Dudes mobile diesel repair services across New York</p>
+            <div class="hero-buttons">
+                <a href="tel:+18032306390" class="btn btn-primary">Call Now</a>
+                <a href="contact-form.html" class="btn btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations-section">
+        <div class="container">
+            <div class="intro-text">
+                <p>Diesel Dudes provides comprehensive mobile diesel repair services throughout New York. Our experienced technicians are available 24/7 for emergency roadside assistance and scheduled maintenance.</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="state-group">
+                    <h2 class="state-title">New York</h2>
+                    <div class="location-cards">
+                        <!-- Manhattan -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Manhattan, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Manhattan, Midtown, Upper East Side, Upper West Side, Downtown</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Brooklyn -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Brooklyn, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Brooklyn Heights, Williamsburg, Park Slope, Bay Ridge, Coney Island</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Queens -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Queens, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Astoria, Long Island City, Flushing, Jamaica, Forest Hills</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- The Bronx -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>The Bronx, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Bronx, Riverdale, Pelham Bay, Fordham, Hunts Point</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Staten Island -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Staten Island, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Staten Island, St. George, New Dorp, Tottenville, Great Kills</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Albany -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Albany, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Albany, Troy, Schenectady, Colonie, Guilderland</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Buffalo -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Buffalo, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Buffalo, Amherst, Cheektowaga, Tonawanda, West Seneca</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Rochester -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Rochester, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Rochester, Greece, Irondequoit, Brighton, Henrietta</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Syracuse -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Syracuse, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Syracuse, DeWitt, Manlius, Fayetteville, East Syracuse</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Niagara Falls -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Niagara Falls, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Niagara Falls, Lewiston, Grand Island, North Tonawanda</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Utica -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Utica, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Utica, New Hartford, Whitesboro, Yorkville, Marcy</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Schenectady -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Schenectady, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Schenectady, Niskayuna, Rotterdam, Glenville, Scotia</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Binghamton -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Binghamton, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Binghamton, Vestal, Johnson City, Endicott, Endwell</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Ithaca -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Ithaca, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Ithaca, Lansing, Dryden, Trumansburg, Newfield</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Saratoga Springs -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Saratoga Springs, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Saratoga Springs, Ballston Spa, Malta, Wilton, Clifton Park</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Hempstead -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Hempstead, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Hempstead, Uniondale, Garden City, Rockville Centre, Freeport</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Brookhaven -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Brookhaven, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Brookhaven, Patchogue, Port Jefferson, Shirley, Mastic</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Oyster Bay -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Oyster Bay, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Oyster Bay, Hicksville, Plainview, Syosset, Woodbury</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Islip -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Islip, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Islip, Bay Shore, Brentwood, Central Islip, Hauppauge</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Huntington -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Huntington, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Huntington, Huntington Station, Cold Spring Harbor, Lloyd Harbor</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Babylon -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Babylon, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Babylon, Lindenhurst, West Babylon, North Babylon, Copiague</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- North Hempstead -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>North Hempstead, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>North Hempstead, Great Neck, Manhasset, Port Washington, Roslyn</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Yonkers -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Yonkers, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Yonkers, Hastings-on-Hudson, Dobbs Ferry, Irvington, Tarrytown</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- New Rochelle -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>New Rochelle, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>New Rochelle, Larchmont, Mamaroneck, Pelham, Bronxville</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Mount Vernon -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Mount Vernon, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Mount Vernon, Pelham, Eastchester, Tuckahoe, Bronxville</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- White Plains -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>White Plains, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>White Plains, Harrison, Rye, Port Chester, Purchase</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Poughkeepsie -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Poughkeepsie, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Poughkeepsie, Hyde Park, Wappingers Falls, Fishkill, Beacon</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Newburgh -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Newburgh, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Newburgh, New Windsor, Cornwall, Highland Falls, West Point</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+
+                        <!-- Kingston -->
+                        <a href="locations.html" class="location-card">
+                            <div class="card-header">
+                                <h3>Kingston, NY</h3>
+                                <span class="emergency-badge">24/7</span>
+                            </div>
+                            <div class="service-areas">
+                                <h4>Service Areas:</h4>
+                                <p>Kingston, Saugerties, Woodstock, Hurley, Ulster</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="cta-text">View Details</span>
+                                <img src="img/arrow-3.svg" alt="Arrow" class="arrow-icon" width="20" height="10">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/dd-logo-footer.png" alt="Diesel Dudes" width="200" height="74">
+                    <div class="footer-contact">
+                        <p class="contact-label">24/7 Emergency Service</p>
+                        <a href="tel:+18032306390" class="contact-phone">(803) 230-6390</a>
+                        <p class="contact-hours">Available 24/7</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="EmergencyRoadsideAssistance.html">Emergency Roadside</a></li>
+                        <li><a href="brakes.html">Brake Repair</a></li>
+                        <li><a href="tires.html">Tire Service</a></li>
+                        <li><a href="electrical.html">Electrical Repair</a></li>
+                        <li><a href="engine.html">Engine Diagnostics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Locations</h3>
+                    <ul>
+                        <li><a href="locations-ny.html">New York</a></li>
+                        <li><a href="locations-ny.html">Manhattan</a></li>
+                        <li><a href="locations-ny.html">Brooklyn</a></li>
+                        <li><a href="locations-ny.html">Queens</a></li>
+                        <li><a href="locations-ny.html">The Bronx</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact-form.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact-form.html">Contact Form</a></li>
+                        <li><a href="tel:+18032306390">Emergency Call</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="support.html">Technical Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

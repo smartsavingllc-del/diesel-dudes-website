@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - The Digital Chief of Staff</title>
+    <meta name="description" content="Terms of Service for The Digital Chief of Staff - Learn about our service terms, payment policies, and client responsibilities.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digitalchiefofstaff.com/terms-of-service">
+    <meta property="og:title" content="Terms of Service - The Digital Chief of Staff">
+    <meta property="og:description" content="Terms of Service for The Digital Chief of Staff - Learn about our service terms, payment policies, and client responsibilities.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://digitalchiefofstaff.com/terms-of-service">
+    <meta property="twitter:title" content="Terms of Service - The Digital Chief of Staff">
+    <meta property="twitter:description" content="Terms of Service for The Digital Chief of Staff - Learn about our service terms, payment policies, and client responsibilities.">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service",
+        "description": "Terms of Service for The Digital Chief of Staff",
+        "url": "https://digitalchiefofstaff.com/terms-of-service"
+    }
+    </script>
+    
+    <!-- Preload fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    
+    <style>
+        :root {
+            --color-primary: #000;
+            --color-secondary: #333;
+            --color-accent: #007AFF;
+            --color-light: #f8f9fa;
+            --color-border: #e9ecef;
+            --color-white: #fff;
+            --color-black: #000;
+            
+            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+            
+            --border-radius: 20px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-secondary);
+            background-color: var(--color-white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-bottom: 2px solid #000;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover {
+            color: var(--color-accent);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .story-text {
+            font-size: 20px;
+            color: var(--color-secondary);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .bg-light {
+            background-color: var(--color-light);
+        }
+        
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #000;
+            box-shadow: var(--shadow-card);
+        }
+        
+        .terms-content h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: var(--color-primary);
+        }
+        
+        .terms-content p {
+            margin-bottom: 20px;
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .terms-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .terms-content li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand p {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .footer-column h3 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--color-white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            opacity: 1;
+            color: var(--color-accent);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+        
+        .footer-bottom-content {
+            text-align: center;
+        }
+        
+        .footer-bottom-content p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .breadcrumb {
+            background: var(--color-light);
+            padding: 20px 0;
+            margin-top: 102px;
+        }
+        
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            color: var(--color-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .story-text {
+                font-size: 18px;
+            }
+            
+            .nav-menu {
+                gap: 20px;
+            }
+            
+            .nav-menu a {
+                font-size: 14px;
+            }
+            
+            .terms-content {
+                padding: 30px 20px;
+            }
+            
+            .breadcrumb {
+                margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="digital-chief-of-staff.html">
+                        <img src="dcs-logo-horizontal.svg" alt="The Digital Chief of Staff Logo" style="height: 50px; width: auto;">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="digital-chief-of-staff.html">Home</a></li>
+                        <li><a href="onboarding-offboarding.html">Onboarding</a></li>
+                        <li><a href="cross-platform-expertise.html">Cross-Platform</a></li>
+                        <li><a href="modern-device-management.html">Device Management</a></li>
+                        <li><a href="daily-operations-support.html">Daily Support</a></li>
+                        <li><a href="it-procurement-asset-management.html">IT Procurement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="digital-chief-of-staff.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Terms of Service</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-title">Terms of Service</h1>
+                <p class="story-text">Last Updated: August 16, 2025</p>
+            </div>
+            
+            <div class="terms-content">
+                <p>Please read these Terms of Service ("Terms") carefully before using the website or engaging the services of "The Digital Chief of Staff" (the "Service") operated by Lelen Lemou ("I", "my", "me").</p>
+                
+                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access the Service.</p>
+                
+                <h3>Scope of Services</h3>
+                <p>I will provide IT support and consulting services as detailed in a mutually agreed-upon service package or Statement of Work ("SOW"). Services are performed with high professional standards and business ethics. I will perform the services as an independent contractor, not as an employee of your company.</p>
+                
+                <h3>Payment Terms</h3>
+                <p>Fees for services will be outlined in your service package agreement. For monthly retainer services, payment is due at the beginning of each monthly service period. For project-based work, payment schedules will be defined in the SOW. Late payments may result in a suspension of services.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>In no event shall I be liable for any lost profits, lost data, or any indirect, special, incidental, or consequential damages arising out of or in connection with the services provided. My total liability to you for any and all claims arising from the use of the Service is limited to the amount you paid me for services in the preceding three (3) months.</p>
+                
+                <h3>Client Responsibilities</h3>
+                <p>To ensure the effective delivery of services, you agree to provide timely access to necessary personnel, equipment, and information as reasonably required. You are responsible for the security of your own data and for maintaining your own backups.</p>
+                
+                <h3>Confidentiality</h3>
+                <p>I will treat all non-public information provided by you as confidential. This includes business practices, financial information, and any other proprietary information. This information will not be disclosed to any third party without your prior written consent, except as required by law.</p>
+                
+                <h3>Termination</h3>
+                <p>Either party may terminate the service agreement with thirty (30) days written notice. I reserve the right to terminate services immediately if you breach these Terms. Upon termination, you are obligated to pay for all services rendered up to the termination date.</p>
+                
+                <h3>Changes to Terms</h3>
+                <p>I reserve the right to modify these Terms at any time. I will notify you of any changes by posting the new Terms of Service on this page. Your continued use of the Service after any such changes constitutes your acceptance of the new Terms.</p>
+                
+                <h3>Governing Law</h3>
+                <p>These Terms shall be governed and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>The Digital Chief of Staff</h3>
+                    <p>Professional IT support for NYC's ambitious startups. I handle the tech so you can focus on growth.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="onboarding-offboarding.html">Employee Onboarding</a></li>
+                        <li><a href="modern-device-management.html">Device Management</a></li>
+                        <li><a href="daily-operations-support.html">Daily Support</a></li>
+                        <li><a href="it-procurement-asset-management.html">IT Procurement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="digital-chief-of-staff.html">Home</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:Lelen@digitalchiefofstaff.com">Lelen@digitalchiefofstaff.com</a></li>
+                        <li><a href="tel:+1-347-464-9436">+1 (347) 464-9436</a></li>
+                        <li><a href="#contact">Schedule Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 The Digital Chief of Staff. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = '#fff';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
